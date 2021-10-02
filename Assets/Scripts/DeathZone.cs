@@ -10,6 +10,11 @@ public class DeathZone : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Destroy(other.gameObject);
+     // Debug.Log($"new:{UIHundler.hundler.Score},old:{UIHundler.hundler.OldScore}");
+
+        UIHundler.hundler.Save();
+        
+
         Manager.GameOver();
     }
 }

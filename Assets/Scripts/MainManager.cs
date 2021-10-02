@@ -65,11 +65,15 @@ public class MainManager : MonoBehaviour
     void AddPoint(int point)
     {
         m_Points += point;
+        UIHundler.hundler.Score = m_Points;
+        Debug.Log(UIHundler.hundler.Score);
         ScoreText.text = $"Score : {m_Points}";
     }
 
     public void GameOver()
     {
+       
+       
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
